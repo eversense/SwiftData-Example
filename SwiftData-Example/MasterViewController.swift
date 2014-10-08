@@ -42,9 +42,9 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-        let addedDate = NSDate.date()
-        let id = sampleModel.add(addedDate)
-        let dic = ["ID":id, "data":addedDate]
+        let now = NSDate.date()
+        let id = sampleModel.add(now)
+        let dic = ["ID":id, "data":now]
         objects.insertObject(dic, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
